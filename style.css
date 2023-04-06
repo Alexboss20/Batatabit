@@ -138,6 +138,7 @@ main{
 }
 .main-table-container{
     position:absolute;
+    display: flex;
     width: 100%;
     height: 300px;
     display: inline-block;
@@ -146,24 +147,24 @@ main{
     position: absolute;
     opacity: 0;
     z-index: 1;
-    width: 70%;
+    width: 220px;
     min-width: 235px;
     max-width: 500px;
     height: 360px;
     margin: 0 auto;
-    left: 4rem;
+    left: calc(50% - 120px);
     font-family: "Inter", sans-serif;
 }
 .main-commission-table{
     opacity: 0;
     z-index: 2;
     position: absolute;
-    width: 70%;
+    width: 220px;
     min-width: 235px;
     max-width: 500px;
     height: 360px;
     margin: 0 auto;
-    left: 4rem;
+    left: calc(50% - 120px);
     font-family: "Inter", sans-serif;
 }
 .main-currency-table .currency-table--title {
@@ -278,13 +279,13 @@ main{
     color: var(--warm-black);
 }
 .toggleBtn{
+    display:inline-block;
     position: absolute;
     z-index: 3;
     width: 10px;
     height: 10px;
-    display: inline-block;
-    left: 30rem;
-    top: 98rem;
+    top: 980px;
+    left:90%;
     background-image: url(./assets/icons/Vector.svg);
     transform: rotate(270deg);
     background-position: center;
@@ -293,13 +294,14 @@ main{
     
 }
 .chgBtn{
+    display:inline-block;
     position: absolute;
     z-index: 4;
     width: 10px;
     height: 10px;
-    display: inline-block;
-    left: 2rem;
-    top: 98rem;
+    top: 980px;
+    left:20px;
+    /* estilos del arrowBtn */
     background-image: url(./assets/icons/Vector.svg);
     transform: rotate(90deg);
     background-position: center;
@@ -595,18 +597,6 @@ footer .left ul {
     color: var(--just-white);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes slide-left {
     0% {
         transform: translateX(0);
@@ -624,4 +614,25 @@ footer .left ul {
     }
 }
 
+@media(min-width:466px){
+    .main-currency-table, .main-commission-table{
+        left:20%;
+    }
+    .toggleBtn{
+        left:90%;
+        top:940px;
+    }
+    .chgBtn{
+        left: 15%;
+    }
+}
+@media(min-width:760px){
+    .main-commission-table{
+        position: relative;
+    }
+    .toggleBtn{
+        display: none;
+    }
+
+}
 
